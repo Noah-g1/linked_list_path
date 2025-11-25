@@ -1,5 +1,9 @@
 class Node {
   constructor(position, next = null) {
+    if (!(position instanceof Vector2)) {
+      print("Invalid Position");
+    }
+
     this.position = position;
     this.next = next;
   }
