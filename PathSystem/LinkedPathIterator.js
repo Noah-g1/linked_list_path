@@ -1,19 +1,19 @@
 class LinkedPathIterator {
     constructor(linkedPath) {
         if (linkedPath == null) {
-            print("Invalid Path");
+            throw new Error("Invalid Path");
         }
 
         this.next = linkedPath.getHead();
     }
 
     hasNext() {
-        return this.next != null;
+        return this.next !== null;
     }
 
     next() {
         if (!this.hasNext()) {
-            print("No next");
+            throw new Error("No next");
         }
 
         let data = this.next.getData();
