@@ -4,11 +4,11 @@ class LinkedPathIterator {
             throw new Error("Invalid Path");
         }
 
-        this.next = linkedPath.getHead();
+        this.nextNode = linkedPath.getHead();
     }
 
     hasNext() {
-        return this.next !== null;
+        return this.nextNode !== null;
     }
 
     next() {
@@ -16,9 +16,9 @@ class LinkedPathIterator {
             throw new Error("No next");
         }
 
-        let data = this.next.getData();
-        this.next = this.next.getNext();
+        let position = this.nextNode.getPosition();
+        this.nextNode = this.nextNode.getNext();
 
-        return data;
+        return position;
     }
 }

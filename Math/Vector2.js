@@ -13,7 +13,7 @@ class Vector2 {
   }
   
   normalize() {
-    let magnitude = this.magnitude;
+    let magnitude = this.magnitude();
     
     let nx = this.x / magnitude;
     let ny = this.y / magnitude;

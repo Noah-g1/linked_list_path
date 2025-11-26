@@ -32,7 +32,7 @@ class Grid {
   getIndex(x, y) {
     let xIndex = floor(x / this.cellSize);
     let yIndex = floor(y / this.cellSize);
-    
+
     return yIndex * this.numCols + xIndex;
   }
 }
